@@ -8,9 +8,14 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "core-js": "^3.6.5",
+    "hooper": "^0.3.4",
+    "smooth-scrollbar": "^8.5.2",
     "vue": "^2.6.11",
-    "vue-router": "^3.2.0"
+    "vue-parallaxy": "^1.1.1",
+    "vue-router": "^3.2.0",
+    "vue-text-transition": "^1.0.19"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",

@@ -38,10 +38,11 @@ export default {
     height: 100%;
     object-fit: cover;
     opacity: .2;
+    top: 0;
   }
   h1 {
     font-size: 5em;
-    font-family: 'Playfair Display', serif;
+    font-family: 'Playfair Display', serif !important;
     width: 50%;
     line-height: 1em;
     margin: 0px;

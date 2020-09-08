@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
+import Home from "../views/Preview.vue";
 
 Vue.use(VueRouter);
 
@@ -13,8 +14,7 @@ const routes = [
   {
     path: "/preview",
     name: "Preview",
-    component: () =>
-      import("../views/Preview.vue")
+    component: Preview
   }
 ];
 

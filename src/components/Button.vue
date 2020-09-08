@@ -1,0 +1,24 @@
+<template>
+    <div id="Button"> {{ text }} </div>
+</template>
+
+<script>
+export default {
+    name: 'Button',
+    props: {
+        text: String
+    }
+}
+</script>
+
+<style scoped>
+    #Button {
+        padding: 10px;
+        padding-left: 80px;
+        padding-right: 80px;
+        border-radius: 40px;
+        background-color: #FF6F64;
+        display: inline-block;
+        color: #fff;
+    }
+</style>

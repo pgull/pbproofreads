@@ -21,3 +21,7 @@ new Vue({
   },
   render (h) { return h(this.ViewComponent) }
 })
+
+window.addEventListener('popstate', () => {
+  App.currentRoute = window.location.pathname
+})

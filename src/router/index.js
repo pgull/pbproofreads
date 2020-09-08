@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
-import Preview from "../views/Preview.vue";
+import Draft from "../views/Draft.vue";
 
 Vue.use(VueRouter);
 
@@ -12,10 +12,9 @@ const routes = [
     component: Home
   },
   {
-    path: "/preview",
-    name: "Preview",
-    component: Preview
-  }
+    path: "/draft",
+    name: "Draft",
+    component: Draft}
 ];
 
 const router = new VueRouter({

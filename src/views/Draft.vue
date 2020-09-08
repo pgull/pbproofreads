@@ -43,7 +43,7 @@ import GreyBlock from '../components/GreyBlock.vue'
 import Button from '../components/Button.vue'
 
 export default {
-  name: 'Home',
+  name: 'Draft',
   props: {
     msg: String
   },

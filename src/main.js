@@ -5,8 +5,8 @@ import Home from './pages/Home/Home.vue'
 const NotFound = { template: '<p>Page not found</p>' }
 
 const routes = {
-  '/': App,
-  '/preview': Home
+  '/preview': App,
+  '/': Home
 }
 
 new Vue({

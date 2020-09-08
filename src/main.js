@@ -1,27 +1,10 @@
-import Vue from 'vue'
-import App from './App.vue'
-import Home from './pages/Home/Home.vue'
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
 
-const NotFound = { template: '<p>Page not found</p>' }
-
-const routes = {
-  '/': App,
-  '/preview': Home
-}
+Vue.config.productionTip = false;
 
 new Vue({
-  el: '#app',
-  data: {
-    currentRoute: window.location.pathname
-  },
-  computed: {
-    ViewComponent () {
-      return routes[this.currentRoute] || NotFound
-    }
-  },
-  render (h) { return h(this.ViewComponent) }
-})
-
-window.addEventListener('popstate', () => {
-  App.currentRoute = window.location.pathname
-})
+  router,
+  render: h => h(App)
+}).$mount("#app");

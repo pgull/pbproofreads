@@ -1,6 +1,5 @@
 <template>
-
-  <div id="homepage" data-scrollbar>
+  <div id="homepage">
     <HeroPane header="Better than spell check." body="From fiction to term papers, let's make your work look great." cta="Get started"
     />
     <WhiteBlock>
@@ -9,9 +8,10 @@
         <p data-aos="fade-up" data-aos-duration="1000">We'll take whatever you have and make <br> you look like a heckin' rockstar.</p>
       </div>
       <div class="block-right">
-        <img class="upper" src="../assets/user0.png">
+        <img class="upper" src="../assets/user0.png" data-aos="fade-left" data-aos-duration="1000">
       </div>
     </WhiteBlock>
+
     <GreyBlock>
       <div class="center-text">
         <h2 data-aos="fade-up" data-aos-duration="1000">How it works:</h2>
@@ -41,6 +41,7 @@
     <WhiteBlock>
       <div class="center-text">
         <h2 data-aos="fade-up" data-aos-duration="1000">Let's talk about your project</h2>
+        <Quiz />
       </div>
     </WhiteBlock>
     <GreyBlock>
@@ -85,11 +86,11 @@
 </template>
 
 <script>
-
   import HeroPane from '../components/HeroPane.vue'
   import WhiteBlock from '../components/WhiteBlock.vue'
   import GreyBlock from '../components/GreyBlock.vue'
   import Button from '../components/Button.vue'
+  import Quiz from '../components/Quiz.vue'
   import { Hooper, Slide } from 'hooper';
   import 'hooper/dist/hooper.css';
 
@@ -104,7 +105,8 @@
       GreyBlock,
       Button,
       Hooper,
-      Slide
+      Slide,
+      Quiz
     }
   }
 
@@ -129,6 +131,8 @@
   body {
     margin: 0 !important;
     overflow-x: hidden;
+    perspective: 8px !important;
+    perspective-origin: 0% !important;
   }
   * {
     font-family: 'Inter var', sans-serif;
@@ -137,6 +141,14 @@
 </style>
 
 <style scoped>
+  .parallax-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .testimony-card {
     overflow: hidden;
     background-color: #fff;
@@ -199,6 +211,14 @@
   }
   .invisicard img {
     width: 60%;
+  }
+  .floating {
+    position: absolute;
+    z-index: 99;
+    top: 1500px;
+    left: 100px;
+    transform: translateZ(3px) scale(0.625);
+    width: 200px;
   }
   .hooper {
     height: 600px;

@@ -11,6 +11,7 @@
     "aos": "^2.3.4",
     "core-js": "^3.6.5",
     "hooper": "^0.3.4",
+    "prerender-spa-plugin": "^3.4.0",
     "smooth-scrollbar": "^8.5.2",
     "vue": "^2.6.11",
     "vue-parallaxy": "^1.1.1",
@@ -44,7 +45,12 @@
       "parser": "babel-eslint"
     },
     "rules": {
-      "vue/no-parsing-error": [2, { "invalid-first-character-of-tag-name": false }]
+      "vue/no-parsing-error": [
+        2,
+        {
+          "invalid-first-character-of-tag-name": false
+        }
+      ]
     }
   },
   "browserslist": [

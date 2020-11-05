@@ -12,7 +12,7 @@
   <div v-show="questionIndex === this.questions.length">
     <h2>Let's get in touch.</h2>
     <h3> {{ this.rating < 4 ? 'This proofread could be free for you.' : this.rating < 8 ? 'This proofread could be as little as $0.01 per word.' : 'We need more information.' }} </h3>
-    <form name="pb-contact" method="POST" data-netlify="true" method="POST"  name="contactform" data-netlify="true"  data-netlify-honeypot="bot-field" enctype="application/x-www-form-urlencoded">
+    <form name="pb-contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="application/x-www-form-urlencoded">
       <input type="hidden" name="pb-contact-form" value="quote" />
       <h4>Your name:</h4>
       <input type="text" name="name" placeholder="John Doe" />
@@ -22,7 +22,6 @@
       <button type="submit">Send</button>
   </form>
   </div>
-
 </div>
 </template>
 

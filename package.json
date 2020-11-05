@@ -43,7 +43,9 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "vue/no-parsing-error": [2, { "invalid-first-character-of-tag-name": false }]
+    }
   },
   "browserslist": [
     "> 1%",

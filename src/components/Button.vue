@@ -20,5 +20,10 @@ export default {
         background-color: #FF6F64;
         display: inline-block;
         color: #fff;
+        cursor: pointer;
+        transition: .3s ease;
+    }
+    #Button:hover {
+      box-shadow: 0px 5px 20px rgba(255, 111, 100,0.5);
     }
 </style>

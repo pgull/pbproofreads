@@ -20,19 +20,19 @@
       <br>
       <div class="invisicard" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <img src="../assets/quote.png">
-        <h3>Get a quote</h3>
+        <h3>➊ Get a quote</h3>
       </div>
       <div class="invisicard" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
         <img src="../assets/submit.png">
-        <h3>Submit your work</h3>
+        <h3>➋ Submit your work</h3>
       </div>
       <div class="invisicard" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
         <img src="../assets/enhance.png">
-        <h3>We'll enhance it</h3>
+        <h3>➌ We'll enhance it</h3>
       </div>
       <div class="invisicard" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="900">
         <img src="../assets/publish.png">
-        <h3>Go publish!</h3>
+        <h3>➍ Go publish!</h3>
       </div>
       <div class="center-button">
         <Button text="Get started" data-aos="fade-up" data-aos-duration="1000"></Button>
@@ -40,11 +40,15 @@
     </GreyBlock>
     <WhiteBlock>
       <div class="center-text">
-        <h2 data-aos="fade-up" data-aos-duration="1000">Let's talk about your project</h2>
         <Quiz />
       </div>
     </WhiteBlock>
     <GreyBlock>
+      <div class="center-text">
+        <h2 data-aos="fade-up" data-aos-duration="1000">What people are saying</h2>
+        <br/>
+        <br/>
+      </div>
       <hooper :itemsToShow="1.75" :centerMode="true" :infiniteScroll="true" :autoPlay="true" :playSpeed="5000">
         <slide>
             <div class="testimony-card">
@@ -81,6 +85,7 @@
         <Button text="Get started" data-aos="fade-up" data-aos-duration="1000"></Button>
       </div>
     </GreyBlock>
+    <Footer></Footer>
   </div>
 
 </template>
@@ -91,6 +96,7 @@
   import GreyBlock from '../components/GreyBlock.vue'
   import Button from '../components/Button.vue'
   import Quiz from '../components/Quiz.vue'
+  import Footer from '../components/Footer.vue'
   import { Hooper, Slide } from 'hooper';
   import 'hooper/dist/hooper.css';
 
@@ -106,7 +112,8 @@
       Button,
       Hooper,
       Slide,
-      Quiz
+      Quiz,
+      Footer
     }
   }
 
@@ -179,12 +186,14 @@
   h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
+    margin: 0;
+    margin-bottom: 20px;
   }
   .block-left {
     display: inline-block;
     width: 50%;
     float: left;
-    padding-top: 3%;
+    padding-top: 6%;
   }
   .block-right {
     text-align: right;
@@ -198,7 +207,7 @@
     text-align: center;
   }
   .center-button {
-    margin-top: 100px;
+    margin-top: 80px;
     position: relative;
     display: inline-block;
     left: 50%;

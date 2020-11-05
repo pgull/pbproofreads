@@ -26,9 +26,9 @@ export default {
     width: 100vw;
   }
   .content {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    width: 1000px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    width: 900px;
     margin: 0 auto;
   }
   @media only screen and (max-width: 1100px) {

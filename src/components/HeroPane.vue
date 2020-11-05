@@ -56,8 +56,8 @@ export default {
     position: relative;
     display: inline-block;
     width: 100vw;
-    height: 99vh;
-    max-height: 1000px;
+    height: 95vh;
+    max-height: 800px;
     background-color: #404040;
     color: #fff;
   }

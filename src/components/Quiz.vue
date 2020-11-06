@@ -12,15 +12,15 @@
   <div v-show="questionIndex === this.questions.length">
     <h2>Let's get in touch.</h2>
     <h3> {{ this.rating < 4 ? 'This proofread could be free for you.' : this.rating < 8 ? 'This proofread could be as little as $0.01 per word.' : 'We need more information.' }} </h3>
-    <form name="pb-contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="application/x-www-form-urlencoded">
-      <input type="hidden" name="pb-contact-form" value="quote" />
-      <h4>Your name:</h4>
-      <input type="text" name="name" placeholder="John Doe" />
-      <h4>Your email:</h4>
-      <input type="text" name="email" placeholder="janedoe@email.com"/>
-      <br>
-      <button type="submit">Send</button>
-  </form>
+    <form name="pb-contact" @submit.prevent="submit" enctype="application/x-www-form-urlencoded">
+       <input type="hidden" name="pb-contact-form" value="quote" />
+       <h4>Your name: {{ name }}</h4>
+       <input type="text" name="name" v-model="name" placeholder="John Doe" />
+       <h4>Your email:</h4>
+       <input type="text" name="email" v-model="email" placeholder="janedoe@email.com"/>
+       <br>
+       <button type="submit">Send {{ name }}</button>
+   </form>
   </div>
 </div>
 </template>
@@ -87,12 +87,29 @@ export default {
   components: {},
   data: function() {
     return {
+      name: '',
+      email: '',
       questions,
       questionIndex: 0,
       rating: 0
     }
   },
+  watch: {
+    // whenever question changes, this function will run
+    name: function (newName) {
+      const name = document.getElementById('leadform-name')
+      name.value = newName
+    },
+    email: function (newEmail) {
+      const email = document.getElementById('leadform-email')
+      email.value = newEmail
+    }
+  },
   methods: {
+    submit: function () {
+      const form = document.getElementById('leadform')
+      form.submit()
+    },
     next: function(n) {
       this.questionIndex++;
       this.rating = this.rating + n;

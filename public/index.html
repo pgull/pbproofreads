@@ -8,6 +8,11 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
+  <form id="leadform" name="pb-contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="application/x-www-form-urlencoded" hidden>
+     <input id="leadform-quote" type="hidden" name="pb-contact-form" value="quote" />
+     <input id="leadform-name" type="text" name="name" placeholder="John Doe" />
+     <input id="leadform-email" type="email" name="email" placeholder="janedoe@email.com"/>
+ </form>
     <noscript>
       <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>

@@ -87,8 +87,8 @@ export default {
   components: {},
   data: function() {
     return {
-      name,
-      email,
+      name: '',
+      email: '',
       questions,
       questionIndex: 0,
       rating: 0

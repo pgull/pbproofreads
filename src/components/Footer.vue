@@ -2,7 +2,7 @@
   <div class="footer-container">
     <div class="content">
       <img style="height: 100px" src="../assets/pbproofreads.png">
-      <p style="float: right; margin-top: 45px">&copy;2020 PB Proofreads, All Rights Reserved</p>
+      <p>&copy;2020 PB Proofreads, All Rights Reserved</p>
     </div>
   </div>
 </template>
@@ -24,5 +24,21 @@ export default {
     padding-bottom: 100px;
     width: 900px;
     margin: 0 auto;
+  }
+  p {
+    float: right;
+    margin-top: 45px;
+  }
+  @media only screen and (max-width: 500px) {
+    .content {
+      text-align: center;
+      width: 100vw;
+
+    }
+    p {
+      float: left;
+      text-align: center;
+      width: 100%;
+    }
   }
 </style>

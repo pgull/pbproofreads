@@ -3,6 +3,7 @@
     <HeroPane header="Better than     spell check." body="From fiction to term papers, let's make your work look great." cta="Get started"
     />
     <WhiteBlock>
+      <div class="stamp"><img style="left: -600px; top: 100px;" src="../assets/leaf0.png" /></div>
       <div class="block-left">
         <h2 data-aos="fade-up" data-aos-duration="1000"> It's the best way to finish <br> your writing project</h2>
         <p data-aos="fade-up" data-aos-duration="1000">We'll take whatever you have and make <br> you look like a heckin' rockstar.</p>
@@ -36,6 +37,7 @@
       <div class="center-button">
         <a href="#quiz"><Button text="Get started" data-aos="fade-up" data-aos-duration="1000"></Button></a>
       </div>
+      <div class="stamp"><img style="left: 1100px;" src="../assets/leaf1.png" /></div>
     </GreyBlock>
     <WhiteBlock>
       <a id="quiz" style="display: inline-block; position: relative; widh: 100%;top: -40px;"></a>
@@ -44,6 +46,7 @@
       </div>
     </WhiteBlock>
     <GreyBlock>
+      <div class="stamp"><img style="left: -500px; top: -240px;" src="../assets/stamp.png" /></div>
       <div class="center-text">
         <h2 data-aos="fade-up" data-aos-duration="1000">What people are saying</h2>
         <br/>
@@ -172,6 +175,14 @@
 </style>
 
 <style scoped>
+  .stamp {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+  }
+  .stamp img{
+    position: absolute;
+  }
   img.review {
     border-radius: 50%;
     overflow: hidden;

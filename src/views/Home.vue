@@ -39,7 +39,7 @@
     <div class="stamp" v-parallax="-0.2"><img style="left: 1100px;" src="../assets/leaf1.png" /></div>
   </GreyBlock>
   <WhiteBlock>
-    <a id="quiz" style="display: inline-block; position: relative; widh: 100%;top: -40px;"></a>
+    <a id="quiz" style="display: inline-block; position: relative; widh: 100%;top: -80px;"></a>
     <div class="center-text">
       <p class="eyebrow"> Get a quote </p>
       <Quiz />

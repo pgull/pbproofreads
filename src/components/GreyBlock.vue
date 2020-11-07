@@ -34,6 +34,12 @@ export default {
   }
   @media only screen and (max-width: 1100px) {
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 500px) {
+    .content {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      width: 80vw;
+      margin: 0 auto;
+    }
   }
 </style>

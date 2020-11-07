@@ -1,6 +1,6 @@
 <template>
   <div id="homepage">
-    <HeroPane header="Better than spell check." body="From fiction to term papers, let's make your work look great." cta="Get started"
+    <HeroPane header="Better than     spell check." body="From fiction to term papers, let's make your work look great." cta="Get started"
     />
     <WhiteBlock>
       <div class="block-left">
@@ -11,7 +11,6 @@
         <img class="upper" src="../assets/user0.png" data-aos="fade-left" data-aos-duration="1000">
       </div>
     </WhiteBlock>
-
     <GreyBlock>
       <div class="center-text">
         <h2 data-aos="fade-up" data-aos-duration="1000">How it works:</h2>
@@ -35,10 +34,11 @@
         <h3>➍ Go publish!</h3>
       </div>
       <div class="center-button">
-        <Button text="Get started" data-aos="fade-up" data-aos-duration="1000"></Button>
+        <a href="#quiz"><Button text="Get started" data-aos="fade-up" data-aos-duration="1000"></Button></a>
       </div>
     </GreyBlock>
     <WhiteBlock>
+      <a id="quiz" style="display: inline-block; position: relative; widh: 100%;top: -40px;"></a>
       <div class="center-text">
         <Quiz />
       </div>
@@ -49,40 +49,24 @@
         <br/>
         <br/>
       </div>
-      <hooper :itemsToShow="1.75" :centerMode="true" :infiniteScroll="true" :autoPlay="true" :playSpeed="5000">
-        <slide>
-            <div class="testimony-card">
-              <div class="testimony-content">
-                <img src="../assets/nopic.png" width="100"/>
-                <h4> Sandy Cheeks </h4>
-                <h5> Author of The Dome </h5>
-                <p>If you get the chance to have Paula take a look at your writing—whether it’s a novel, a novella, or any other work—snap it up! When it comes to proofreaders, she’s the very best. She’s got a deadeye for grammar and punctuation errors, and she also points out (gently, bless her) word choice errors. Not only that, she’s a great guide, teaching me why a certain verb tense needs to be changed, so that I can internalize the usage and improve the next time.</p>
+      <div class="hooperdiv">
+        <div class="gradient-left"></div>
+        <div class="gradient-right"></div>
+        <hooper :itemsToShow="1.75" :centerMode="true" :infiniteScroll="true" :autoPlay="true" :playSpeed="5000" :wheelControl="false">
+          <slide v-for="testimonies in this.testimonials" :key="testimonies.imgs">
+              <div class="testimony-card">
+                <div class="testimony-content">
+                  <img :src="require(`@/assets/${testimonies.img}`)" width="100" class="review"/>
+                  <h4> {{ testimonies.name }} </h4>
+                  <h5> {{ testimonies.location }} </h5>
+                  <p> {{ testimonies.review }} </p>
+                </div>
               </div>
-            </div>
-        </slide>
-        <slide>
-          <div class="testimony-card">
-            <div class="testimony-content">
-              <img src="../assets/nopic.png" width="100"/>
-              <h4> Sandy Cheeks </h4>
-              <h5> Author of The Dome </h5>
-              <p>If you get the chance to have Paula take a look at your writing—whether it’s a novel, a novella, or any other work—snap it up! When it comes to proofreaders, she’s the very best. She’s got a deadeye for grammar and punctuation errors, and she also points out (gently, bless her) word choice errors. Not only that, she’s a great guide, teaching me why a certain verb tense needs to be changed, so that I can internalize the usage and improve the next time.</p>
-            </div>
-          </div>
-        </slide>
-        <slide>
-          <div class="testimony-card">
-            <div class="testimony-content">
-              <img src="../assets/nopic.png" width="100"/>
-              <h4> Sandy Cheeks </h4>
-              <h5> Author of The Dome </h5>
-              <p>If you get the chance to have Paula take a look at your writing—whether it’s a novel, a novella, or any other work—snap it up! When it comes to proofreaders, she’s the very best. She’s got a deadeye for grammar and punctuation errors, and she also points out (gently, bless her) word choice errors. Not only that, she’s a great guide, teaching me why a certain verb tense needs to be changed, so that I can internalize the usage and improve the next time.</p>
-            </div>
-          </div>
-        </slide>
-      </hooper>
+          </slide>
+        </hooper>
+      </div>
       <div class="center-button">
-        <Button text="Get started" data-aos="fade-up" data-aos-duration="1000"></Button>
+        <a href="#quiz"><Button text="Get started" data-aos="fade-up" data-aos-duration="1000"></Button></a>
       </div>
     </GreyBlock>
     <Footer></Footer>
@@ -114,6 +98,39 @@
       Slide,
       Quiz,
       Footer
+    },
+    data: function() {
+      return {
+        testimonials: [{
+          img: 'reviews/dianne.jpg',
+          name: 'Dianne J. Wilson',
+          location: 'South African Author',
+          review: "I'm afraid PB Proofreads has ruined me for any other copy editor. The attention to detail and consistency is phenomenal, and the turnaround time is fast. At this risk of sounding gushy, I wouldn't want to work with anyone else!  I will be sending my next book as soon as it's written."
+        },
+        {
+          img: 'reviews/whitney.jpg',
+          name: "Whitney Dineen",
+          location: "Award-winning author",
+          review: "Paula is an absolutes dream to work with! She's the first to lay eyes on my new books.  I don't know how she sees her way through all the missing words, missing commas, and misspellings, but she does and darn if she doesn't make me look literate. I love working with this lady!"
+        }, {
+          img: 'reviews/erin.jpg',
+          name: "Erin Huss",
+          location: "Published Author",
+          review: "I highly recommend PB Proofreads! Paula is quick, precise, and she respects my writing style. She is also kind and professional and I love working with her."
+        }, {
+          img: 'reviews/laclayton.jpg',
+          name: "L.A. Clayton",
+          location: "Author",
+          review: "PB Proofreads has been my go to for all things copy editing/proofreading since I finished my first book. The work is nothing less than superb and her turn around time is astounding. I would not publish any book without first utilizing Paula’s expertise. Highly recommend.",
+        }, {
+          img: 'reviews/melissa.jpg',
+          name: "Melissa Baldwin",
+          location: "Bestselling Author of 20 Romantic Comedies and Cozy Mysteries",
+          review: "Paula Bothwell is a gem. I’ve had the pleasure of working with her for a few years and I’d be lost without her. Paula is detailed, efficient and thorough. If you’ re in the market for editing and proofreading services, look no further. Highly recommend."
+        }]
+      }
+    },
+    methods: {
     }
   }
 
@@ -126,7 +143,7 @@
     margin: 40px 0 0;
   }
   a {
-    color: #42b983;
+    color: #42b983 !important;
   }
 
 </style>
@@ -142,12 +159,23 @@
     perspective-origin: 0% !important;
   }
   * {
+    outline: none;
     font-family: 'Inter var', sans-serif;
   }
-
+  html {
+    scroll-behavior: smooth;
+  }
+  input:focus {
+    outline: 1px solid #FF6F64;
+  }
 </style>
 
 <style scoped>
+  img.review {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 100px;
+  }
   .parallax-container {
     height: 100%;
     width: 100%;
@@ -166,7 +194,7 @@
     transform: translateX(-50%);
     border-radius: 10px;
     opacity: 0.5 !important;
-    height: 600px;
+    height: 500px;
   }
   .testimony-card h4 {
     margin: 5px;
@@ -176,7 +204,7 @@
     margin: 5px;
   }
   .testimony-content {
-    padding: 80px;
+    padding: 60px;
     text-align: center;
   }
   #homepage {
@@ -186,7 +214,7 @@
   h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.5em;
-    margin: 0;
+    margin: 0 !important;
     margin-bottom: 20px;
   }
   .block-left {
@@ -230,13 +258,62 @@
     width: 200px;
   }
   .hooper {
-    height: 600px;
+    height: 500px;
+    position: relative;
+  }
+  .gradient-left {
+    background: linear-gradient(to right, rgba(238,238,238,1), rgba(0,0,0,0));
+    height: 500px;
+    position: absolute;
+    width: 40px;
+    z-index: 99;
+  }
+  .gradient-right {
+    background: linear-gradient(to left, rgba(238,238,238,1), rgba(0,0,0,0));
+    height: 500px;
+    position: absolute;
+    width: 40px;
+    z-index: 99;
+    right: 0;
+  }
+  .hooperdiv {
+    position: relative;
   }
   .hooper-slide {
     margin: 0;
   }
   .hooper-slide.is-current .testimony-card {
     opacity: 1 !important;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .block-left {
+      width: 100%;
+    }
+    .block-right {
+      width: 100%;
+    }
+    .block-right img {
+      width: 100%;
+      margin-top: 20px;
+    }
+    br {
+      display: none;
+    }
+    h2 {
+      font-size: 2em;
+    }
+    h3 {
+      font-size: .9em;
+      margin-top: 20px;
+      min-height: 40px;
+    }
+    .invisicard {
+      width: 50%;
+      display: inline-block;
+      text-align: center;
+      margin-top: 60px;
+    }
   }
 
 </style>

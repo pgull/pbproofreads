@@ -1,13 +1,13 @@
 <template>
   <div id="HeroPane" class="wrapper">
     <video autoplay muted loop>
-      <source src="../assets/AdobeStock_144209237_Video_HD_Preview.mp4" />
+      <source src="../assets/vid.mp4" />
     </video>
     <div class="center">
       <img src="../assets/pbproofreads.png" />
       <h1> {{ header }} </h1>
       <p> {{ body }} </p>
-      <Button text="Get Started"></Button>
+      <a href="#quiz"><Button text="Get Started"></Button></a>
     </div>
   </div>
 </template>
@@ -60,6 +60,7 @@ export default {
     max-height: 800px;
     background-color: #404040;
     color: #fff;
+    box-sizing: border-box;
   }
   .center {
     position: absolute;
@@ -86,7 +87,7 @@ export default {
       width: 30%;
     }
   }
-  @media only screen and (max-width: 800px) {
+  @media only screen and (max-width: 500px) {
     .center {
       position: absolute;
       top: 45%;
@@ -96,12 +97,13 @@ export default {
     }
     h1 {
       width: 100%;
+      font-size: 3.5em;
     }
     p {
       width: 80%;
     }
     img {
-      width: 150px;
+      width: 120px;
     }
   }
 </style>

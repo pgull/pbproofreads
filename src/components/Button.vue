@@ -26,4 +26,10 @@ export default {
     #Button:hover {
       box-shadow: 0px 5px 20px rgba(255, 111, 100,0.5);
     }
+    @media only screen and (max-width: 500px) {
+      #Button {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+    }
 </style>

@@ -14,12 +14,12 @@
     <h3> {{ this.rating < 4 ? 'This proofread could be free for you.' : this.rating < 8 ? 'This proofread could be as little as $0.01 per word.' : 'We need more information.' }} </h3>
     <form name="pb-contact" @submit.prevent="submit" enctype="application/x-www-form-urlencoded">
        <input type="hidden" name="pb-contact-form" value="quote" />
-       <h4>Your name: {{ name }}</h4>
+       <h4>Your name:</h4>
        <input type="text" name="name" v-model="name" placeholder="John Doe" />
        <h4>Your email:</h4>
        <input type="text" name="email" v-model="email" placeholder="janedoe@email.com"/>
        <br>
-       <button type="submit">Send {{ name }}</button>
+       <button type="submit">Send</button>
    </form>
   </div>
 </div>
@@ -126,6 +126,8 @@ export default {
 
 <style scoped>
 h2 {
+  margin: 0;
+  margin-bottom: 20px;
   font-family: 'Playfair Display', serif;
   font-size: 2.5em;
 }
@@ -161,7 +163,7 @@ input::placeholder{
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15)
 }
 h3 {
-    margin-bottom: 5px;
+    margin-bottom: 20px;
     font-weight: 400;
 }
 h4 {
@@ -185,6 +187,17 @@ button {
 }
 button:hover {
   box-shadow: 0px 5px 20px rgba(255, 111, 100,0.5);
+}
+@media only screen and (max-width: 500px) {
+  .question {
+    width: 85%;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  form {
+    width: 85%;
+  }
 }
 
 </style>

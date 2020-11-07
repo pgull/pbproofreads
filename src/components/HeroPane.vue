@@ -88,6 +88,9 @@ export default {
     }
   }
   @media only screen and (max-width: 500px) {
+    .wrapper {
+      height: 80vh;
+    }
     .center {
       position: absolute;
       top: 45%;
@@ -97,7 +100,7 @@ export default {
     }
     h1 {
       width: 100%;
-      font-size: 3.5em;
+      font-size: 3.8em;
     }
     p {
       width: 80%;

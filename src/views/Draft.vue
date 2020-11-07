@@ -4,7 +4,7 @@
     />
     <WhiteBlock>
       <div class="block-left">
-        <h2 data-aos="fade-up" data-aos-duration="1000"> It's the best way­ to finish <br> your writing project</h2>
+        <h2 data-aos="fade-up" data-aos-duration="1000"> It's the best way to finish <br> your writing project</h2>
         <p data-aos="fade-up" data-aos-duration="1000">We'll take whatever you have and make <br> you look like a heckin' rockstar.</p>
       </div>
       <div class="block-right">
@@ -52,7 +52,7 @@
       <div class="hooperdiv">
         <div class="gradient-left"></div>
         <div class="gradient-right"></div>
-        <hooper :itemsToShow="1.75" :centerMode="true" :infiniteScroll="true" :autoPlay="true" :playSpeed="5000" :wheelControl="false">
+        <hooper :itemsToShow="this.wWidth < 500 ? 1.2 : 1.75" :centerMode="true" :infiniteScroll="true" :autoPlay="true" :playSpeed="5000" :wheelControl="false">
           <slide v-for="testimonies in this.testimonials" :key="testimonies.imgs">
               <div class="testimony-card">
                 <div class="testimony-content">
@@ -127,7 +127,8 @@
           name: "Melissa Baldwin",
           location: "Bestselling Author of 20 Romantic Comedies and Cozy Mysteries",
           review: "Paula Bothwell is a gem. I’ve had the pleasure of working with her for a few years and I’d be lost without her. Paula is detailed, efficient and thorough. If you’ re in the market for editing and proofreading services, look no further. Highly recommend."
-        }]
+        }],
+        wWidth: window.innerWidth
       }
     },
     methods: {
@@ -262,14 +263,14 @@
     position: relative;
   }
   .gradient-left {
-    background: linear-gradient(to right, rgba(238,238,238,1), rgba(0,0,0,0));
+    background: linear-gradient(to right, rgba(238,238,238,1), rgba(238,238,238,0));
     height: 500px;
     position: absolute;
     width: 40px;
     z-index: 99;
   }
   .gradient-right {
-    background: linear-gradient(to left, rgba(238,238,238,1), rgba(0,0,0,0));
+    background: linear-gradient(to left, rgba(238,238,238,1), rgba(238,238,238,0));
     height: 500px;
     position: absolute;
     width: 40px;
@@ -287,6 +288,12 @@
   }
 
   @media only screen and (max-width: 500px) {
+    .gradient-right {
+      display: none;
+    }
+    .gradient-left {
+      display: none;
+    }
     .block-left {
       width: 100%;
     }
@@ -301,7 +308,7 @@
       display: none;
     }
     h2 {
-      font-size: 2em;
+      font-size: 2.3em;
     }
     h3 {
       font-size: .9em;
@@ -313,6 +320,23 @@
       display: inline-block;
       text-align: center;
       margin-top: 60px;
+    }
+    .invisicard img {
+      width: 80%;
+    }
+    .hooperdiv {
+      height: 500px;
+      position: relative;
+      width: 100vw;
+      margin-top: 40px;
+    }
+    .hooper {
+      position: absolute;
+      width: 100vw;
+      left: -10%;
+    }
+    .testimony-content {
+      padding: 20px;
     }
   }
 

@@ -93,8 +93,11 @@ import 'hooper/dist/hooper.css';
 
 Vue.use(VueParallaxJs)
 
+document.title = 'PB Proofreads'
+
 export default {
-  name: 'Draft',
+  name: 'PB Proofreads',
+  title: 'PB Proofreads',
   props: {
     msg: String
   },

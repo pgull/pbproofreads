@@ -41,6 +41,7 @@
   <WhiteBlock>
     <a id="quiz" style="display: inline-block; position: relative; widh: 100%;top: -40px;"></a>
     <div class="center-text">
+      <p class="eyebrow"> Get a quote </p>
       <Quiz />
     </div>
   </WhiteBlock>
@@ -180,6 +181,13 @@ input:focus {
 </style>
 
 <style scoped>
+p.eyebrow {
+  font-family: 'Playfair Display', serif;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: -30px;
+  color: #aaa;
+}
 .stamp {
   position: absolute;
   z-index: 999;
@@ -227,7 +235,6 @@ img.review {
 .testimony-card h5 {
   margin: 5px;
 }
-
 .testimony-content {
   padding: 60px;
   text-align: center;

@@ -1,6 +1,6 @@
 <template>
   <div id="HeroPane" class="wrapper">
-    <video autoplay muted loop>
+    <video autoplay muted loop v-parallax="0.4" style="position: relative; top: -55px">
       <source src="../assets/vid.mp4" />
     </video>
     <div class="center">
@@ -13,7 +13,12 @@
 </template>
 
 <script>
+import Vue from 'vue';
 import Button from '../components/Button.vue'
+import VueParallaxJs from 'vue-parallax-js';
+
+Vue.use(VueParallaxJs)
+
 export default {
   name: 'HeroPane',
   props: {

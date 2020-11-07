@@ -40,7 +40,7 @@ export default {
   }
   video {
     width: 100%;
-    height: 110%;
+    height: 100%;
     object-fit: cover;
     opacity: .2;
     top: 0;

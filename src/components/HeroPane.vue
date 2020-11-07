@@ -61,6 +61,7 @@ export default {
     background-color: #404040;
     color: #fff;
     box-sizing: border-box;
+    margin-bottom: -10px;
   }
   .center {
     position: absolute;

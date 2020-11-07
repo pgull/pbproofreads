@@ -24,6 +24,8 @@ export default {
     position: relative;
     display: inline-block;
     width: 100vw;
+    background-color: #fff;
+    margin-top: -4px;
   }
   .content {
     padding-top: 80px;

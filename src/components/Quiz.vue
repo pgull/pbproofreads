@@ -46,22 +46,22 @@ var questions = [{
     },
   ]
 }, {
-  text: "How may words is your project?",
+  text: "How many words is your project?",
   responses: [{
-      text: '50,000 or less',
+      text: 'more than 50,000',
+      rating: 4
+    },
+    {
+      text: '50,000 or fewer',
       rating: 3
     },
     {
-      text: '10,000 or less',
+      text: '10,000 or fewer',
       rating: 1
     },
     {
-      text: '500 or less',
+      text: '500 or fewer',
       rating: 0
-    },
-    {
-      text: 'more than 50,000',
-      rating: 4
     },
   ]
 }, {
@@ -75,7 +75,7 @@ var questions = [{
       rating: 8
     },
     {
-      text: 'Pretty complete, besides a proofread.',
+      text: 'Pretty complete, besides a proofread',
       rating: 0
     }
   ]
@@ -125,6 +125,10 @@ export default {
 </script>
 
 <style scoped>
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(10px)}
+    to {opacity: 1; transform: translateY(0px)}
+}
 h2 {
   margin: 0;
   margin-bottom: 20px;
@@ -132,6 +136,7 @@ h2 {
   font-size: 2.5em;
 }
 .question {
+  animation: fadeIn .5s ease;
   background-color: #eee;
   border: 2px solid #eee;
   margin: 10px auto;
@@ -140,12 +145,27 @@ h2 {
   width: 50%;
   cursor: pointer;
   transition: .3s ease;
+  opacity: 0;
+  animation-fill-mode: forwards
+}
+.question:nth-of-type(1) {
+  animation-delay: .1s
+}
+.question:nth-of-type(2) {
+  animation-delay: .2s
+}
+.question:nth-of-type(3) {
+  animation-delay: .3s
+}
+.question:nth-of-type(4) {
+  animation-delay: .4s
 }
 form {
   text-align: left;
   width: 30%;
   margin: 0 auto;
   display: inline-block;
+  animation: fadeIn .5s ease;
 }
 input[type=text]{
   width: 100%;

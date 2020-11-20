@@ -66,6 +66,7 @@
             </div>
           </div>
         </slide>
+          <hooper-navigation slot="hooper-addons"></hooper-navigation>
       </hooper>
     </div>
     <div class="center-button">
@@ -87,7 +88,8 @@ import Footer from '../components/Footer.vue'
 import Vue from "vue";
 import {
   Hooper,
-  Slide
+  Slide,
+  Navigation as HooperNavigation
 } from 'hooper';
 import 'hooper/dist/hooper.css';
 
@@ -109,7 +111,8 @@ export default {
     Hooper,
     Slide,
     Quiz,
-    Footer
+    Footer,
+    HooperNavigation
   },
   data: function() {
     return {
@@ -117,7 +120,7 @@ export default {
           img: 'reviews/dianne.jpg',
           name: 'Dianne J. Wilson',
           location: 'South African Author',
-          review: "I'm afraid PB Proofreads has ruined me for any other copy editor. The attention to detail and consistency is phenomenal, and the turnaround time is fast. At this risk of sounding gushy, I wouldn't want to work with anyone else!  I will be sending my next book as soon as it's written."
+          review: "I'm afraid PB Proofreads has ruined me for any other copy editor. Her attention to detail and consistency is phenomenal, and the turnaround time is fast. At the risk of sounding gushy, I wouldn't want to work with anyone else!  I will be sending my next book as soon as it's written."
         },
         {
           img: 'reviews/whitney.jpg',
@@ -133,12 +136,12 @@ export default {
           img: 'reviews/laclayton.jpg',
           name: "L.A. Clayton",
           location: "Author",
-          review: "PB Proofreads has been my go to for all things copy editing/proofreading since I finished my first book. The work is nothing less than superb and her turn around time is astounding. I would not publish any book without first utilizing Paula’s expertise. Highly recommend.",
+          review: "PB Proofreads has been my go-to for all things copy editing/proofreading since I finished my first book. The work is nothing less than superb and her turn around time is astounding. I would not publish any book without first utilizing Paula’s expertise. Highly recommend.",
         }, {
           img: 'reviews/melissa.jpg',
           name: "Melissa Baldwin",
           location: "Bestselling Author of 20 Romantic Comedies and Cozy Mysteries",
-          review: "Paula Bothwell is a gem. I’ve had the pleasure of working with her for a few years and I’d be lost without her. Paula is detailed, efficient and thorough. If you’ re in the market for editing and proofreading services, look no further. Highly recommend."
+          review: "Paula Bothwell is a gem. I’ve had the pleasure of working with her for a few years and I’d be lost without her. Paula is detailed, efficient, and thorough. If you’re in the market for editing and proofreading services, look no further. Highly recommend."
         }
       ],
       wWidth: window.innerWidth
@@ -312,17 +315,19 @@ img.upper {
   background: linear-gradient(to right, rgba(238, 238, 238, 1), rgba(238, 238, 238, 0));
   height: 500px;
   position: absolute;
-  width: 40px;
+  width: 60px;
   z-index: 99;
+  pointer-events: none;
 }
 
 .gradient-right {
   background: linear-gradient(to left, rgba(238, 238, 238, 1), rgba(238, 238, 238, 0));
   height: 500px;
   position: absolute;
-  width: 40px;
+  width: 60px;
   z-index: 99;
   right: 0;
+  pointer-events: none;
 }
 
 .hooperdiv {
@@ -335,6 +340,12 @@ img.upper {
 
 .hooper-slide.is-current .testimony-card {
   opacity: 1 !important;
+}
+.hooper-navigation {
+  position: absolute;
+  z-index: 9999;
+  width: 100%;
+  top: 50%;
 }
 
 @media only screen and (max-width: 500px) {

@@ -142,6 +142,21 @@ export default {
           name: "Melissa Baldwin",
           location: "Bestselling Author of 20 Romantic Comedies and Cozy Mysteries",
           review: "Paula Bothwell is a gem. I’ve had the pleasure of working with her for a few years and I’d be lost without her. Paula is detailed, efficient, and thorough. If you’re in the market for editing and proofreading services, look no further. Highly recommend."
+        }, {
+          img: 'reviews/backy.jpg',
+          name: "Becky Monson",
+          location: "Bestselling author of Just a Series",
+          review: "Paula is wonderful to work with. She's fast, efficient, and she knows her stuff! Highly recommended!"
+        }, {
+          img: 'reviews/rich.jpg',
+          name: "Rich Amooi,",
+          location: "Amazon Bestselling Author",
+          review: "Paula has proofread all sixteen of my romantic comedies and is an important part of my publishing team. She catches missing periods, overused words, clunky sentences, and everything else in between. I can't imagine releasing a book to the world without her."
+        }, {
+          img: 'reviews/jennifer.jpg',
+          name: "Jennifer Griffith",
+          location: "Author",
+          review: "If you get the chance to have Paula take a look at your writing—whether it’s a novel, a novella, or any other work—snap it up! When it comes to proofreaders, she’s the very best."
         }
       ],
       wWidth: window.innerWidth

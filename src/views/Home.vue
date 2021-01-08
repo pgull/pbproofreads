@@ -143,7 +143,7 @@ export default {
           location: "Bestselling Author of 20 Romantic Comedies and Cozy Mysteries",
           review: "Paula Bothwell is a gem. I’ve had the pleasure of working with her for a few years and I’d be lost without her. Paula is detailed, efficient, and thorough. If you’re in the market for editing and proofreading services, look no further. Highly recommend."
         }, {
-          img: 'reviews/backy.jpg',
+          img: 'reviews/backy.png',
           name: "Becky Monson",
           location: "Bestselling author of Just a Series",
           review: "Paula is wonderful to work with. She's fast, efficient, and she knows her stuff! Highly recommended!"

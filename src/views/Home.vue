@@ -224,6 +224,7 @@ img.review {
   border-radius: 50%;
   overflow: hidden;
   height: 100px;
+  object-fit: cover;
 }
 
 .parallax-container {

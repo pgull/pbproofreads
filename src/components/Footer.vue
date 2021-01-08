@@ -2,7 +2,7 @@
   <div class="footer-container">
     <div class="content">
       <img style="height: 100px" src="../assets/pbproofreads.png">
-      <p>&copy;2020 PB Proofreads, All Rights Reserved</p>
+      <p>&copy;2021 PB Proofreads, All Rights Reserved</p>
     </div>
   </div>
 </template>

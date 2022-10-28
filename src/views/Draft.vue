@@ -119,7 +119,7 @@ export default {
           img: 'reviews/whitney.jpg',
           name: "Whitney Dineen",
           location: "Award-winning author",
-          review: "Paula is an absolutes dream to work with! She's the first to lay eyes on my new books.  I don't know how she sees her way through all the missing words, missing commas, and misspellings, but she does and darn if she doesn't make me look literate. I love working with this lady!"
+          review: "Paula is an absolute dream to work with! She's the first to lay eyes on my new books.  I don't know how she sees her way through all the missing words, missing commas, and misspellings, but she does and darn if she doesn't make me look literate. I love working with this lady!"
         }, {
           img: 'reviews/erin.jpg',
           name: "Erin Huss",
